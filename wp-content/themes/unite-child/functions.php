@@ -97,10 +97,12 @@ function add_actors_tax(){
     );
 }
 
+
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 add_action( 'init', 'films_init' );
 add_action( 'init', 'add_genre_tax' );
 add_action( 'init', 'add_country_tax' );
 add_action( 'init', 'add_year_tax' );
 add_action( 'init', 'add_actors_tax' );
+add_action( 'init', 'testing');
 ?>
