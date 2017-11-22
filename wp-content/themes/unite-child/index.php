@@ -33,8 +33,16 @@ get_header(); ?>
 			<?php unite_paging_nav(); ?>
 
 		<?php else : ?>
+			<?php 
+				
+			$args = array( 'post_type' => 'films', 'posts_per_page' => 10 );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post();
+			 get_template_part( 'content-films', get_post_format() );
+			endwhile;
 
-			<?php get_template_part( 'content-films', 'none' ); ?>
+			?>
+			
 
 		<?php endif; ?>
 
