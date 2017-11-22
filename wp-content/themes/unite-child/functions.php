@@ -24,6 +24,7 @@ function films_init() {
     $args = array(
       'label' => 'Films',
         'public' => true,
+        'has_archive' => true,
         'show_ui' => true,
         'capability_type' => 'post',
         'hierarchical' => false,
